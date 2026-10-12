@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary: #22FF22;
+  --primary-faded: rgba(34, 255, 34, 0.1);
+  --border: #333333;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-massive {
+  font-size: clamp(3rem, 10vw, 110px);
+  line-height: 0.85;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.label-bold {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-massive {
+  background-color: var(--primary);
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: all 0.2s ease;
+}
+
+.btn-massive:hover:not(:disabled) {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.neon-blur {
+  background: var(--primary);
+  filter: blur(160px);
+  opacity: 0.1;
+}
+
+/* Custom scrollbar for matrix look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #22FF22;
+}
